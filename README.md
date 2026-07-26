@@ -1,2 +1,2 @@
-# rishabh-karmakar.me
+# rishabh-karmakar.github.io
 Github website
