@@ -1,0 +1,75 @@
+.ach-container {
+  overflow: hidden;
+  cursor: grab;
+}
+
+.ach-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+}
+
+.ach-card {
+  width: 340px;
+  flex-shrink: 0;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  user-select: none;
+}
+
+.ach-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.ach-year {
+  color: var(--ink-faint);
+  font-size: 0.78rem;
+}
+
+.ach-badge {
+  font-size: 0.66rem;
+  padding: 4px 10px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge-winner {
+  color: var(--alert);
+  background: var(--alert-dim);
+}
+
+.badge-finalist,
+.badge-rank {
+  color: var(--signal);
+  background: var(--signal-dim);
+}
+
+.badge-academic {
+  color: var(--good);
+  background: var(--good-dim);
+}
+
+.ach-card h4 {
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.ach-org {
+  color: var(--signal);
+  font-size: 0.75rem;
+}
+
+.ach-desc {
+  color: var(--ink-dim);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}

@@ -1,0 +1,37 @@
+.footer {
+  padding: 32px 0;
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--good);
+}
+
+.footer-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--good);
+  box-shadow: 0 0 6px var(--good-dim);
+}
+
+.footer-inner a {
+  color: var(--ink-faint);
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.footer-inner a:hover {
+  color: var(--signal);
+}

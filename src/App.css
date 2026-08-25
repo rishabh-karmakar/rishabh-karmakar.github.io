@@ -1,0 +1,16 @@
+main {
+  margin-left: var(--gutter-width);
+  position: relative;
+  z-index: 1;
+}
+
+.footer {
+  margin-left: var(--gutter-width);
+}
+
+@media (max-width: 860px) {
+  main,
+  .footer {
+    margin-left: var(--gutter-width-mobile);
+  }
+}

@@ -1,0 +1,63 @@
+:root {
+  /* ---- Color: systems-monitoring dark palette ---- */
+  --void: #05070c;
+  --panel: #0b0f18;
+  --panel-raised: #101625;
+  --line: #1c2333;
+  --line-bright: #2a3350;
+
+  --ink: #e6ebf5;
+  --ink-dim: #8a93ab;
+  --ink-faint: #4a5266;
+
+  --signal: #4dd8e6;
+  --signal-dim: rgba(77, 216, 230, 0.14);
+  --signal-glow: rgba(77, 216, 230, 0.35);
+
+  --alert: #ffb454;
+  --alert-dim: rgba(255, 180, 84, 0.14);
+
+  --good: #5eead4;
+  --good-dim: rgba(94, 234, 212, 0.14);
+
+  /* Light theme override */
+  --void-light: #f4f6fa;
+  --panel-light: #ffffff;
+  --panel-raised-light: #edf1f7;
+  --line-light: #d8dfea;
+  --line-bright-light: #b9c4d6;
+  --ink-light: #0c1220;
+  --ink-dim-light: #4a5266;
+  --ink-faint-light: #8a93ab;
+  --signal-light: #0891a3;
+  --signal-dim-light: rgba(8, 145, 163, 0.08);
+
+  /* ---- Type ---- */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* ---- Layout ---- */
+  --gutter-width: 56px;
+  --gutter-width-mobile: 28px;
+  --content-max: 1180px;
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 0.3s;
+  --dur-med: 0.6s;
+  --dur-slow: 1s;
+}
+
+[data-theme='light'] {
+  --void: var(--void-light);
+  --panel: var(--panel-light);
+  --panel-raised: var(--panel-raised-light);
+  --line: var(--line-light);
+  --line-bright: var(--line-bright-light);
+  --ink: var(--ink-light);
+  --ink-dim: var(--ink-dim-light);
+  --ink-faint: var(--ink-faint-light);
+  --signal: var(--signal-light);
+  --signal-dim: var(--signal-dim-light);
+}

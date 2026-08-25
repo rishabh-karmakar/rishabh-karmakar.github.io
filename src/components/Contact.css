@@ -1,0 +1,95 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 60px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contact-line {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-label {
+  font-size: 0.7rem;
+  color: var(--signal);
+}
+
+.contact-line a {
+  font-size: 1.05rem;
+  color: var(--ink);
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.contact-line a:hover {
+  color: var(--signal);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form label span {
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 12px 14px;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  outline: none;
+  resize: vertical;
+  transition: border-color var(--dur-fast) var(--ease);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--signal);
+}
+
+.contact-form .btn {
+  align-self: flex-start;
+  border: none;
+}
+
+.contact-form .btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+@media (max-width: 860px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
