@@ -64,7 +64,7 @@ export default function Contact() {
             <div className="contact-line">
               <span className="mono contact-label">linkedin</span>
               <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
-                rishabhkarmakar
+                rishabh-karmakar
               </a>
             </div>
             <div className="contact-line">
