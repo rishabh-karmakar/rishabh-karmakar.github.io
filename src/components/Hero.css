@@ -1,25 +1,32 @@
+:root {
+  --syntax-red: #ff6b6b;
+  --syntax-yellow: #ffeb3b;
+  --syntax-blue: #4fc3f7;
+}
+
 .hero {
   position: relative;
   min-height: 100svh;
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--line);
-  padding-top: 80px;
+  padding-top: 100px;
+  padding-bottom: 60px;
 }
 
 .hero-inner {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 60px;
-  align-items: center;
+  position: relative;
+  z-index: 1;
   width: 100%;
 }
 
+
 .hero-name {
-  font-size: clamp(2.6rem, 6.4vw, 5.2rem);
+  font-size: clamp(1.7rem, 7.4vw, 5.2rem);
   line-height: 1;
   letter-spacing: -0.03em;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+  white-space: nowrap;
 }
 
 .hero-name-line {
@@ -34,6 +41,23 @@
 .hero-char {
   display: inline-block;
 }
+
+.hero-columns {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 70px;
+  align-items: center;
+  width: 100%;
+}
+/* Previous width options tried (second value in 1fr Xfr):
+ * - 0.9fr: Terminal narrower than text (original)
+ * - 1.2fr: Slightly wider terminal
+ * - 1.5fr: Moderately wider terminal
+ * - 3fr: Quite wide terminal
+ * - 5fr: Very wide terminal (current)
+ * - 6fr: Extremely wide terminal
+ * To adjust width, change the second value above (higher = wider terminal)
+ */
 
 .hero-role {
   font-size: clamp(1.1rem, 2vw, 1.5rem);
@@ -168,15 +192,37 @@
 .terminal-body pre {
   margin: 0;
   white-space: pre-wrap;
-  color: var(--ink-dim);
+  color: var(--ink);
 }
 
 .terminal-body code {
-  color: var(--signal);
+  display: block;
+  width: 100%;
+  color: inherit;
+}
+
+.tok-key {
+  color: var(--syntax-yellow);
+}
+
+.tok-string {
+  color: var(--good);
+}
+
+.tok-number {
+  color: var(--syntax-blue);
+}
+
+.tok-keyword {
+  color: var(--syntax-red);
+}
+
+.tok-punct {
+  color: var(--ink);
 }
 
 .boot-line {
-  color: var(--ink-faint);
+  color: var(--ink);
   animation: fadeIn 0.3s ease;
 }
 
@@ -200,6 +246,7 @@
 
 .hero-scroll-cue {
   position: absolute;
+  z-index: 1;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
@@ -229,7 +276,7 @@
 }
 
 @media (max-width: 980px) {
-  .hero-inner {
+  .hero-columns {
     grid-template-columns: 1fr;
   }
   .hero-stats {

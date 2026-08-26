@@ -13,7 +13,7 @@
 .contact-line {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   padding-bottom: 18px;
   border-bottom: 1px solid var(--line);
 }
@@ -23,7 +23,8 @@
   color: var(--signal);
 }
 
-.contact-line a {
+.contact-line a,
+.contact-static {
   font-size: 1.05rem;
   color: var(--ink);
   transition: color var(--dur-fast) var(--ease);

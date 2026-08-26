@@ -1,9 +1,36 @@
+.projects-scroll-wrap {
+  position: relative;
+}
+
 .projects-list {
   display: flex;
   flex-direction: column;
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
+  max-height: 720px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.projects-fade-top,
+.projects-fade-bottom {
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  height: 48px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.projects-fade-top {
+  top: 1px;
+  background: linear-gradient(180deg, var(--void), transparent);
+}
+
+.projects-fade-bottom {
+  bottom: 1px;
+  background: linear-gradient(0deg, var(--void), transparent);
 }
 
 .project-row {
@@ -12,7 +39,7 @@
   grid-template-columns: 50px 260px 1fr 160px;
   gap: 32px;
   align-items: center;
-  padding: 36px;
+  padding: 32px 36px;
   transition: background var(--dur-fast) var(--ease);
 }
 
@@ -72,6 +99,22 @@
   border-radius: 2px;
 }
 
+.project-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.project-links a {
+  font-size: 0.76rem;
+  color: var(--good);
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.project-links a:hover {
+  color: var(--signal);
+}
+
 .project-metric {
   display: flex;
   flex-direction: column;
@@ -95,6 +138,9 @@
 }
 
 @media (max-width: 980px) {
+  .projects-list {
+    max-height: 620px;
+  }
   .project-row {
     grid-template-columns: 1fr;
     gap: 20px;

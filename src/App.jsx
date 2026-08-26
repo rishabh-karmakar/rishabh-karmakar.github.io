@@ -26,7 +26,7 @@ function App() {
       <Gutter activeSection={active} />
       <Nav activeSection={active} theme={theme} onToggleTheme={toggleTheme} />
       <main>
-        <Hero />
+        <Hero theme={theme} />
         <About />
         <Journey />
         <Skills />

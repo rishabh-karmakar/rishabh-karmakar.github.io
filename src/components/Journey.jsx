@@ -15,7 +15,7 @@ export default function Journey() {
       <div className="section-inner">
         <span className="eyebrow">02 &mdash; journey</span>
         <h2 className="section-title">Commit log.</h2>
-        <p className="section-desc">Five years of shipping, from a research bench to a banking-grade platform.</p>
+        <p className="section-desc">Five years of building, from a research bench to a banking-grade platform.</p>
 
         <div className="timeline" ref={ref}>
           <div className="timeline-rail">

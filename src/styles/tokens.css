@@ -31,6 +31,10 @@
   --ink-faint-light: #8a93ab;
   --signal-light: #0891a3;
   --signal-dim-light: rgba(8, 145, 163, 0.08);
+  --alert-light: #b45309;
+  --alert-dim-light: rgba(180, 83, 9, 0.1);
+  --good-light: #0f9488;
+  --good-dim-light: rgba(15, 148, 136, 0.1);
 
   /* ---- Type ---- */
   --font-display: 'Space Grotesk', sans-serif;
@@ -60,4 +64,8 @@
   --ink-faint: var(--ink-faint-light);
   --signal: var(--signal-light);
   --signal-dim: var(--signal-dim-light);
+  --alert: var(--alert-light);
+  --alert-dim: var(--alert-dim-light);
+  --good: var(--good-light);
+  --good-dim: var(--good-dim-light);
 }
