@@ -18,7 +18,7 @@ export default function Achievements() {
   return (
     <section id="achievements" className="section achievements">
       <div className="section-inner">
-        <span className="eyebrow">05 &mdash; achievements</span>
+        <span className="eyebrow">06 &mdash; achievements</span>
         <h2 className="section-title">Log entries.</h2>
         <p className="section-desc mono">$ tail -f achievements.log &mdash; drag to scroll</p>
 

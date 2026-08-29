@@ -2,10 +2,11 @@ export const profile = {
   name: 'Rishabh Karmakar',
   role: 'MS in Computer Science (Machine Learning) @ Columbia',
   tagline: 'Previously built resilient CRM and AI infrastructure at Wells Fargo. Now pursuing a postgrad in Computer Science and Machine Learning at Columbia University.',
-  email: 'rishabh.rk1705@gmail.com',
-  phones: ['+91 7738068950', '+1 646 529 0314'],
+  email: 'rishabhkarmakar24@gmail.com',
+  phones: ['+91 7738068950', '+1 (646) 529-0314'],
   linkedin: 'https://www.linkedin.com/in/rishabh-karmakar',
   github: 'https://github.com/rishabh-karmakar',
+  googleScholar: 'https://scholar.google.com/citations?user=sAECZMgAAAAJ',
 };
 
 export const stats = [
@@ -350,13 +351,59 @@ export const achievements = [
   },
 ];
 
-
+export const scholarStats = {
+  citations: 51,
+  hIndex: 3,
+  i10Index: 2,
+  url: 'https://scholar.google.com/citations?user=sAECZMgAAAAJ',
+};
+ 
+export const publications = [
+  {
+    id: 'lstm-summarization',
+    title: 'Indian regional language abstractive text summarization using attention-based LSTM neural network',
+    authors: 'R Karmakar, K Nirantar, P Kurunkar, P Hiremath, D Chaudhari',
+    venue: '2021 International Conference on Intelligent Technologies (CONIT)',
+    year: '2021',
+    citedBy: 32,
+    url: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=sAECZMgAAAAJ&citation_for_view=sAECZMgAAAAJ:u5HHmVD_uO8C',
+  },
+  {
+    id: 'blockchain-scm-paper',
+    title: 'Blockchain based supply chain management',
+    authors: 'K Nirantar, R Karmakar, P Hiremath, D Chaudhari',
+    venue: '2022 3rd International Conference for Emerging Technology (INCET)',
+    year: '2022',
+    citedBy: 10,
+    url: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=sAECZMgAAAAJ&citation_for_view=sAECZMgAAAAJ:u-x6o8ySG0sC',
+  },
+  {
+    id: 'facial-attendance-paper',
+    title: 'Facial attendance system using MTCNN and feature mapping',
+    authors: 'R Karmakar',
+    venue: 'International Journal of Engineering Applied Sciences and Technology, 5(4)',
+    year: '2020',
+    citedBy: 7,
+    url: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=sAECZMgAAAAJ&citation_for_view=sAECZMgAAAAJ:9yKSN-GCB0IC',
+  },
+  {
+    id: 'blockchain-hld-paper',
+    title: 'High-level design and rapid implementation of blockchain-based real time supply chain platform',
+    authors: 'R Karmakar, K Nirantar, P Hiremath, D Chaudhari',
+    venue: '2022 IEEE Pune Section International Conference (PuneCon)',
+    year: '2022',
+    citedBy: 2,
+    url: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=sAECZMgAAAAJ&citation_for_view=sAECZMgAAAAJ:d1gkVwhDpl0C',
+  },
+];
+ 
 export const navSections = [
   { id: 'home', label: 'index', path: '~/' },
   { id: 'about', label: 'about', path: '~/about.sys' },
   { id: 'journey', label: 'journey', path: '~/journey.log' },
   { id: 'skills', label: 'skills', path: '~/skills.cfg' },
   { id: 'projects', label: 'projects', path: '~/projects/index.ts' },
+  { id: 'publications', label: 'publications', path: '~/publications.bib' },
   { id: 'achievements', label: 'achievements', path: '~/achievements.log' },
   { id: 'contact', label: 'contact', path: '~/contact.sh' },
 ];

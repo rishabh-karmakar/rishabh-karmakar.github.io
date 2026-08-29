@@ -77,6 +77,32 @@
   display: flex;
   gap: 16px;
   margin-bottom: 56px;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.social-icons a {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--dur-fast) var(--ease), opacity var(--dur-fast) var(--ease);
+}
+
+.social-icons a:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+.social-icons a svg {
+  width: 100%;
+  height: 100%;
 }
 
 .btn {

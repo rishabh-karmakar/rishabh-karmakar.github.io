@@ -11,6 +11,7 @@ import About from './components/About';
 import Journey from './components/Journey';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Publications from './components/Publications';
 import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -31,6 +32,7 @@ function App() {
         <Journey />
         <Skills />
         <Projects />
+        <Publications />
         <Achievements />
         <Contact />
       </main>

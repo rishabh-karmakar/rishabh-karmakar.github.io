@@ -41,7 +41,7 @@ export default function Contact() {
   return (
     <section id="contact" className="section contact">
       <div className="section-inner">
-        <span className="eyebrow">06 &mdash; contact</span>
+        <span className="eyebrow">07 &mdash; contact</span>
         <h2 className="section-title">Let&rsquo;s build something reliable.</h2>
         <p className="section-desc">
           Open to corporate engagements, technology consulting, and collaborative research.
