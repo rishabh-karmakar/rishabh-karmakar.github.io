@@ -7,13 +7,125 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/rishabh-karmakar',
   github: 'https://github.com/rishabh-karmakar',
   googleScholar: 'https://scholar.google.com/citations?user=sAECZMgAAAAJ',
+  resume: '/Rishabh_Karmakar_Resume.pdf',
 };
 
-export const stats = [
-  { value: '4', unit: 'yrs', label: 'Engineering at Wells Fargo' },
-  { value: '9.41', unit: 'gpa', label: 'B.E. Computer Engineering' },
-  { value: '4', unit: 'papers', label: 'Published IEEE research' },
-  { value: 'Top 16', unit: '/16k', label: 'Crack-the-Covid national hackathon' },
+export const links = [
+  { label: 'LinkedIn', href: profile.linkedin },
+  { label: 'GitHub', href: profile.github },
+  { label: 'Scholar', href: profile.googleScholar },
+  { label: 'Résumé', href: profile.resume, download: true },
+];
+
+// Skill groups from the resume. Each one is a galaxy in the hero; its items are the planets.
+export const galaxies = [
+  {
+    label: 'AI & LLM Engineering',
+    items: ['RAG', 'Multi-Agent Systems', 'Model Context Protocol', 'Prompt Engineering', 'LLM Evaluation', 'Embeddings & Semantic Search', 'Fine-Tuning (LoRA)', 'Document AI & OCR'],
+  },
+  {
+    label: 'AI Frameworks',
+    items: ['PyTorch', 'TensorFlow', 'LangChain', 'LangGraph', 'LlamaIndex', 'Hugging Face Transformers', 'Sentence Transformers'],
+  },
+  {
+    label: 'Programming',
+    items: ['Python', 'JavaScript', 'TypeScript', 'C#', 'SQL', 'C++', 'R', 'HTML / CSS'],
+  },
+  {
+    label: 'Cloud',
+    items: ['Amazon Web Services', 'Microsoft Azure', 'Google Cloud Platform'],
+  },
+  {
+    label: 'Frameworks & Tools',
+    items: ['React', 'Angular', 'Node', 'Django', 'FastAPI', 'Pandas', 'NumPy', 'Git', 'Docker', 'Kubernetes', 'MySQL', 'MongoDB', 'Power Platform'],
+  },
+];
+
+export const hero = {
+  kicker: 'MS Computer Science, Columbia / Ex Senior Software Engineer, Wells Fargo / New York',
+  thesisLead: 'I put AI into systems that',
+  thesisEm: 'can’t go down.',
+  sub: 'Four years as a software engineer at Wells Fargo, building agentic AI, semantic search and banking platforms. Four published papers. Now studying machine learning at Columbia, and looking for software engineering and ML roles.',
+};
+
+export const heroStats = [
+  { value: 4, suffix: ' yrs', label: 'At Wells Fargo, promoted twice: Associate to AVP to SAVP' },
+  { value: 100, suffix: '%', label: 'Uptime sustained on the platform I owned' },
+  { value: 80, suffix: '%', label: 'Less manual engineering effort with AI agents' },
+  { value: 51, label: 'Citations across 4 published papers' },
+];
+
+export const marqueeItems = ['Agentic AI', 'RAG + Semantic Search', 'Published Researcher', 'Columbia MS CS', '4 Years at Wells Fargo'];
+
+// Opening statement and the three things I do around the code.
+export const abstract = {
+  statement: 'I bring AI into complex, high-stakes enterprise systems without sacrificing reliability.',
+  body: 'I am an MS Computer Science student at Columbia, concentrating in machine learning, after four years as a software engineer at Wells Fargo. I am looking for software engineering and machine learning roles where I can turn AI research into production-ready technology.',
+  points: [
+    { title: 'Build', desc: 'AI agents, RAG and semantic search, full-stack products in React and Angular, and the cloud and IAM plumbing underneath them.' },
+    { title: 'Ship', desc: 'Owned development and release of a corporate banking CRM platform and kept it at 100% uptime for four years.' },
+    { title: 'Explain', desc: 'Worked between business stakeholders and four cross-functional teams, ran live demos, wrote the solution docs, and trained 10+ junior engineers.' },
+  ],
+};
+
+// The four lead case studies. Everything else lives in the archive.
+export const caseStudies = [
+  {
+    id: 'engineering-agents',
+    name: 'Engineering agents',
+    figure: 'pipeline',
+    context: 'Wells Fargo · Senior Software Engineer',
+    headline: 'AI agents that take over the engineering chores.',
+    problem: 'Code review, test case design and execution, and vulnerability triage were eating engineering hours on every change.',
+    approach: 'Built agentic AI agents for each task and connected them to SonarQube and Black Duck through Model Context Protocol (MCP) servers.',
+    result: 'Manual effort on those tasks dropped by 80%.',
+    metric: '80%',
+    metricLabel: 'less manual effort',
+    tags: ['Agentic AI', 'MCP', 'SonarQube', 'Black Duck'],
+    caption: 'A change fans out to three agents; two of them reach scanning tools through MCP servers before reporting back.',
+  },
+  {
+    id: 'semantic-search',
+    name: 'Semantic search',
+    figure: 'retrieval',
+    context: 'Wells Fargo · Software Engineer',
+    headline: 'Search that understands the question.',
+    problem: 'Internal search matched keywords, and standing up a test environment meant seeding data by hand.',
+    approach: 'Initiated and delivered a semantic search engine using RAG and a vector database, plus an automated test data seeding pipeline.',
+    result: 'Search efficiency improved by 70%, reaching 5,000 people.',
+    metric: '70%',
+    metricLabel: 'search efficiency gain, reaching 5,000 people',
+    tags: ['RAG', 'Vector DB', 'Embeddings', 'Automation'],
+    caption: 'A query is embedded, compared against the index, and the closest passages come back in ranked order. Scores are illustrative.',
+  },
+  {
+    id: 'compliance-pipeline',
+    name: 'Compliance pipeline',
+    figure: 'hub',
+    context: 'Project · October 2025',
+    headline: 'A multi-agent pipeline for compliance.',
+    problem: 'Checking documents against internal policy and federal regulation by hand is slow and hard to audit.',
+    approach: 'Architected a multi-agent pipeline with dedicated agents for text extraction, internal policy, federal regulation and categorisation, with a RAG layer that grounds every decision in cited source text.',
+    result: 'Processes 10,000+ documents a day and reduced manual overhead by 80%.',
+    metric: '10K+',
+    metricLabel: 'documents per day',
+    tags: ['Python', 'Multi-Agent Orchestration', 'RAG', 'MCP'],
+    caption: 'An orchestrator routes each document to four specialist agents; the two compliance agents cite a shared retrieval layer.',
+  },
+  {
+    id: 'answer-eval',
+    name: 'Answer grading',
+    figure: 'similarity',
+    context: 'GoPrac · Machine Learning and AI Intern',
+    headline: 'Grading written answers by meaning, not keywords.',
+    problem: 'Open-ended answers are slow to grade by hand, and keyword matching fails the moment a correct answer is worded differently.',
+    approach: 'Each answer and its reference are encoded with Sentence-BERT, compared by cosine similarity, and mapped to marks for both short and long responses.',
+    result: 'Reached 85% agreement with expert graders.',
+    metric: '85%',
+    metricLabel: 'agreement with graders',
+    tags: ['Sentence-BERT', 'NLP', 'Python'],
+    caption: 'Cosine similarity between candidate answers (rows) and reference answers (columns). A bright diagonal means each answer matches its own reference. Values are illustrative.',
+  },
 ];
 
 export const manifesto = [
@@ -47,48 +159,78 @@ export const proofPoints = [
 
 export const journey = [
   {
-    date: 'Aug 2026 \u2014 Present',
-    role: 'MS in Computer Science (Machine Learning)',
-    org: 'Columbia University',
-    desc: 'Graduate study in machine learning, building on four years of production AI, CRM, and infrastructure experience at Wells Fargo.',
+    date: 'Aug 2026 — Dec 2027',
+    kind: 'Education',
+    role: 'MS Computer Science, Machine Learning track',
+    org: 'Columbia University · New York',
+    points: ['Graduate study in machine learning, building on four years of production engineering.'],
     status: 'active',
   },
   {
-    date: 'Feb 2026 \u2014 Aug 2026',
+    date: 'Feb 2026 — Aug 2026',
+    kind: 'Experience',
     role: 'Senior Software Engineer (SAVP)',
-    org: 'Wells Fargo',
-    desc: 'Designed secure, high-uptime architectures for Corporate & Commercial Investment Banking. Built semantic search and AI engineering pipelines.',
-    status: 'done',
+    org: 'Wells Fargo · Hyderabad',
+    points: [
+      'Built agentic AI agents for code review, test case design and execution, and vulnerability detection through SonarQube and Black Duck MCP servers, cutting manual effort by 80%.',
+      'Led a CRM case management platform on Microsoft Dynamics and Power Apps for Corporate and Commercial Investment Banking Technology, at 100% uptime for four years.',
+      'Trained and onboarded 10+ junior engineers on Power Platform and full-stack practices.',
+    ],
   },
   {
-    date: 'Aug 2023 \u2014 Jan 2026',
+    date: 'Aug 2023 — Jan 2026',
+    kind: 'Experience',
     role: 'Software Engineer (AVP)',
-    org: 'Wells Fargo',
-    desc: 'Owned development, IAM setup, and automated test deployments for CRM case management platforms. Maintained 100% uptime.',
-    status: 'done',
+    org: 'Wells Fargo · Hyderabad',
+    points: [
+      'Spotted the need for structured mentorship and introduced a mentoring product for 10,000+ employees, owning React and Angular development, deployment and IAM.',
+      'Initiated and delivered a semantic search engine and a test data seeding pipeline, cutting test environment setup time by 70%.',
+    ],
   },
   {
-    date: 'Aug 2022 \u2014 Aug 2023',
+    date: 'Aug 2022 — Aug 2023',
+    kind: 'Experience',
     role: 'Program Associate',
-    org: 'Wells Fargo',
-    desc: 'Assured case management system reliability and shipped efficiency-focused features.',
-    status: 'done',
+    org: 'Wells Fargo · Hyderabad',
+    points: [
+      'Worked with business stakeholders and four cross-functional teams to turn requirements into production features; presented live demos and wrote the solution documentation.',
+    ],
   },
   {
-    date: 'Dec 2020 \u2014 Jul 2022',
-    role: 'Machine Learning & AI Intern',
-    org: 'GoPrac.com',
-    desc: 'Built a subjective answer grading framework with sentence transformers. Developed video emotion/speech analysis for applicant confidence scoring.',
-    status: 'done',
+    date: 'Dec 2020 — Jul 2022',
+    kind: 'Experience',
+    role: 'Machine Learning and AI Intern',
+    org: 'GoPrac · Remote',
+    points: [
+      'Built a multimodal video analysis pipeline for a mock interview platform, scoring expression, body language and speech at 80% agreement with human evaluators, with feedback reports for 5,000+ candidates.',
+      'Engineered a multithreaded pipeline streaming training data from AWS S3 in parallel batches: 90% lower memory use and 70% faster training.',
+      'Developed the SBERT answer evaluation engine, at 85% agreement with expert graders.',
+    ],
   },
   {
-    date: 'Jul 2018 \u2014 May 2022',
-    role: 'B.E. Computer Engineering (Hons. AI/ML)',
+    date: 'Jul 2018 — May 2022',
+    kind: 'Education',
+    role: 'B.E. Computer Engineering, Honors in AI and Machine Learning',
     org: 'IIIT Pune',
-    desc: 'Graduated with a 9.41 CGPA. Published academic papers on blockchain and neural networks.',
-    status: 'done',
+    points: ['Graduated with a 9.41 CGPA (3.98 / 4.0). Published four papers on NLP, computer vision and blockchain.'],
   },
 ];
+
+// Short internships during the degree, 2019 to 2020.
+export const earlyInternships = [
+  { org: 'World of Professional Inc.', role: 'Data Science Executive Intern', note: 'LSTM cryptocurrency forecasting with social sentiment, 94% of predictions within $500' },
+  { org: 'cppsecrets.com', role: 'Data Science Intern, Python Developer', note: 'SBERT answer assessment, speech-to-text and emotion detection' },
+  { org: 'Career Launcher', role: 'Financial ML & Data Science Intern', note: 'Stock return prediction and risk clustering' },
+  { org: 'Cloud Counselage', role: 'Data Science Intern', note: 'Fake news detection, smart recruiting shortlister' },
+  { org: 'leadingindia.ai', role: 'Deep Learning Engineer Intern', note: 'RGB to hyperspectral image reconstruction, 5 architectures' },
+  { org: 'TheSmartBridge', role: 'Machine Learning Engineer Intern', note: 'AI-powered news search on IBM Cloud' },
+  { org: 'Intech Olympiad', role: 'Application and Solution Developer Intern', note: 'Remote education tool for low-resource rural areas' },
+  { org: 'IoTIoT.in', role: 'Artificial Intelligence Intern', note: 'Neural networks for computer vision' },
+];
+
+export const domains = ['Machine Learning', 'Deep Learning', 'Generative AI', 'AI Agents', 'NLP', 'Computer Vision', 'Full Stack Development'];
+
+export const spokenLanguages = ['English', 'Hindi', 'Bengali', 'Marathi'];
 
 export const skillGroups = [
   {
@@ -189,7 +331,7 @@ export const projects = [
     id: 'crypto-predictor',
     title: 'Cryptocurrency price predictor',
     metric: '94%',
-    metricLabel: 'trajectory accuracy',
+    metricLabel: 'of predictions within $500 of the real price',
     desc: 'An LSTM-RNN deep learning engine providing price trajectory predictions, coupled with NLP sentiment scores gathered from social platform trends, output via custom visualization APIs.',
     tags: ['Deep Learning', 'Python', 'LSTM-RNN', 'MongoDB'],
     visual: 'sparkline',
@@ -211,6 +353,14 @@ export const projects = [
     desc: 'A semantic evaluation pipeline grading short and long subjective answers using Sentence-BERT transformers and cosine similarity matrices, benchmarked against manual scoring.',
     tags: ['Transformers', 'Sentence-BERT', 'NLP', 'Python'],
     visual: 'bars',
+    featured: 1,
+    figure: 'similarity',
+    context: 'GoPrac · ML & AI internship',
+    headline: 'Grading written answers by meaning, not keywords.',
+    problem: 'Open-ended answers are slow to grade by hand, and keyword matching fails the moment a correct answer is worded differently.',
+    approach: 'Each answer and its reference are encoded with Sentence-BERT, compared by cosine similarity, and mapped to marks for both short and long responses.',
+    result: 'Benchmarked against manual scoring, the pipeline reached 85% grading efficacy.',
+    caption: 'Cosine similarity between candidate answers (rows) and reference answers (columns). A bright diagonal means each answer matches its own reference.',
   },
   {
     id: 'facial-attendance',
@@ -296,6 +446,39 @@ export const projects = [
     desc: 'A sensor-driven traffic management and monitoring & control system built to track and coordinate vehicle flow across a connected sensor network.',
     tags: ['IoT', 'Sensors', 'Systems Design'],
     visual: 'nodes',
+  },
+  {
+    id: 'interview-video-analysis',
+    title: 'Multimodal interview video analysis',
+    metric: '5,000+',
+    metricLabel: 'candidates given feedback',
+    desc: 'Video analysis pipeline for a mock interview platform, scoring facial expression, body language and speech patterns at 80% agreement with human evaluators and generating feedback reports.',
+    tags: ['Computer Vision', 'Speech', 'Python'],
+  },
+  {
+    id: 'hyperspectral',
+    title: 'RGB to hyperspectral image reconstruction',
+    metric: '31-ch',
+    metricLabel: 'from 3-channel RGB',
+    desc: 'Reconstructed 31-channel hyperspectral images from RGB, training and comparing five architectures on the NTIRE dataset: a Pix2Pix-style GAN, a CycleGAN variant, a CNN and two convolutional autoencoders.',
+    tags: ['GANs', 'Autoencoders', 'Deep Learning'],
+    links: { demo: 'https://medium.com/analytics-vidhya/conversion-of-rgb-images-to-hyperspectral-using-deep-learning-f3dff0a1d60a' },
+  },
+  {
+    id: 'news-search-ibm',
+    title: 'AI-powered news search on IBM Cloud',
+    metric: 'NER',
+    metricLabel: 'entity-indexed search',
+    desc: 'News search application that extracts and organises people, organisations and locations for faster search, designed, deployed and tested end to end on IBM Cloud.',
+    tags: ['NLP', 'IBM Cloud', 'Databases'],
+  },
+  {
+    id: 'fake-news',
+    title: 'Fake news detection',
+    metric: 'TF-IDF',
+    metricLabel: 'passive-aggressive classifier',
+    desc: 'Classifier labelling news articles as real or fake using a TF-IDF vectoriser and a Passive Aggressive Classifier.',
+    tags: ['NLP', 'Classification', 'scikit-learn'],
   }
 ];
 
@@ -398,12 +581,10 @@ export const publications = [
 ];
  
 export const navSections = [
-  { id: 'home', label: 'index', path: '~/' },
-  { id: 'about', label: 'about', path: '~/about.sys' },
-  { id: 'journey', label: 'journey', path: '~/journey.log' },
-  { id: 'skills', label: 'skills', path: '~/skills.cfg' },
-  { id: 'projects', label: 'projects', path: '~/projects/index.ts' },
-  { id: 'publications', label: 'publications', path: '~/publications.bib' },
-  { id: 'achievements', label: 'achievements', path: '~/achievements.log' },
-  { id: 'contact', label: 'contact', path: '~/contact.sh' },
+  { id: 'ask', label: 'Ask' },
+  { id: 'work', label: 'Missions' },
+  { id: 'record', label: 'Flight log' },
+  { id: 'toolkit', label: 'Instruments' },
+  { id: 'papers', label: 'Signals' },
+  { id: 'contact', label: 'Contact' },
 ];

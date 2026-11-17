@@ -1,39 +1,37 @@
 import { useMemo } from 'react';
 import './App.css';
-import { navSections } from './data/content';
+import { marqueeItems, navSections } from './data/content';
 import { useActiveSection } from './hooks/useActiveSection';
+import { useLenis } from './hooks/useLenis';
 import { useTheme } from './hooks/useTheme';
-import Gutter from './components/Gutter';
 import Nav from './components/Nav';
-import Cursor from './components/Cursor';
 import Hero from './components/Hero';
-import About from './components/About';
-import Journey from './components/Journey';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Publications from './components/Publications';
-import Achievements from './components/Achievements';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Marquee from './components/Marquee';
+import Featured from './components/Featured';
+import Ask from './components/Ask';
+import { Abstract, Archive, Contact, Footer, Papers, Rail, Record, Toolkit } from './components/Sections';
 
 function App() {
-  const ids = useMemo(() => navSections.map((s) => s.id), []);
+  const ids = useMemo(() => ['home', 'about', ...navSections.map((s) => s.id)], []);
   const active = useActiveSection(ids);
   const [theme, toggleTheme] = useTheme();
+  useLenis();
 
   return (
     <>
-      <Cursor />
-      <Gutter activeSection={active} />
+      <a href="#work" className="skip-link">Skip to work</a>
       <Nav activeSection={active} theme={theme} onToggleTheme={toggleTheme} />
+      <Rail active={active} />
       <main>
-        <Hero theme={theme} />
-        <About />
-        <Journey />
-        <Skills />
-        <Projects />
-        <Publications />
-        <Achievements />
+        <Hero />
+        <Marquee items={marqueeItems} />
+        <Abstract />
+        <Ask />
+        <Featured />
+        <Archive />
+        <Record />
+        <Toolkit />
+        <Papers />
         <Contact />
       </main>
       <Footer />

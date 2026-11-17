@@ -1,0 +1,20 @@
+# Rishabh Karmakar
+
+> Software engineer and machine learning researcher. MS Computer Science (Machine Learning) at Columbia University; previously four years at Wells Fargo, most recently as Senior Software Engineer, building agentic AI, semantic search and banking platforms. Author of four peer-reviewed papers.
+
+This is a single-page portfolio. All content is in the HTML of the home page.
+
+## Sections
+
+- [About](https://rishabh-karmakar.github.io/#about): Summary and focus areas
+- [Selected work](https://rishabh-karmakar.github.io/#work): Four case studies with problem, approach and measured result
+- [Experience and education](https://rishabh-karmakar.github.io/#record): Roles at Wells Fargo, internships, Columbia University
+- [Skills](https://rishabh-karmakar.github.io/#toolkit): Tools, frameworks and certifications
+- [Publications and awards](https://rishabh-karmakar.github.io/#papers): Papers, citations and recognition
+- [Contact](https://rishabh-karmakar.github.io/#contact): How to get in touch
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/rishabh-karmakar)
+- [GitHub](https://github.com/rishabh-karmakar)
+- [Google Scholar](https://scholar.google.com/citations?user=sAECZMgAAAAJ)

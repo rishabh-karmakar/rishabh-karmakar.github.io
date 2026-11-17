@@ -1,0 +1,989 @@
+/* ---- Shared section furniture ---- */
+.section-head {
+  margin-bottom: clamp(28px, 3.4vw, 48px);
+}
+.section-head .section-desc {
+  max-width: 38ch;
+  font-size: 0.98rem;
+}
+.section-head-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px 48px;
+  flex-wrap: wrap;
+}
+.section-title-sm {
+  font-size: clamp(2.2rem, 5vw, 4.6rem);
+  white-space: normal;
+}
+.early-title {
+  font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.early-title .mono {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--signal);
+  vertical-align: super;
+}
+
+/* ---- 01 Abstract ---- */
+.abstract-statement {
+  font-family: var(--font-display);
+  font-weight: 850;
+  font-stretch: 74%;
+  text-transform: uppercase;
+  font-size: clamp(1.9rem, 4.6vw, 4.4rem);
+  line-height: 0.95;
+  max-width: 24ch;
+  text-wrap: balance;
+}
+.abstract-grid {
+  margin-top: clamp(28px, 4vw, 56px);
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(28px, 5vw, 80px);
+}
+.abstract-body {
+  font-size: 1.12rem;
+  line-height: 1.6;
+  color: var(--ink-dim);
+  max-width: 44ch;
+}
+.abstract-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+.abstract-points li {
+  padding: 4px 22px 0;
+  border-left: 1px solid var(--line-bright);
+}
+.abstract-points h3 {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+  color: var(--signal);
+}
+.abstract-points p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ink-dim);
+}
+
+/* ---- 03 Star catalogue ---- */
+.catalogue {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line-bright);
+}
+.catalogue > li {
+  border-bottom: 1px solid var(--line);
+  transition: background var(--dur-fast) var(--ease);
+}
+.catalogue > li:hover,
+.catalogue > li.is-open {
+  background: color-mix(in srgb, var(--panel) 80%, transparent);
+}
+.catalogue-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 5fr) minmax(0, 4fr) minmax(0, 3fr) 20px;
+  align-items: center;
+  gap: 20px;
+  padding: 13px 12px;
+  background: none;
+  border: 0;
+  text-align: left;
+}
+.catalogue-no {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-dim);
+}
+.catalogue-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 76%;
+  text-transform: uppercase;
+  font-size: clamp(1.1rem, 1.7vw, 1.5rem);
+  line-height: 1.05;
+  transition: color var(--dur-fast) var(--ease);
+}
+.catalogue-row:hover .catalogue-title,
+.is-open .catalogue-title {
+  color: var(--signal);
+}
+.catalogue-tags {
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-dim);
+}
+.catalogue-metric {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  justify-content: flex-end;
+  text-align: right;
+}
+.catalogue-metric b {
+  font-family: var(--font-display);
+  font-weight: 850;
+  font-stretch: 80%;
+  font-size: 1.3rem;
+  white-space: nowrap;
+}
+.catalogue-metric .mono {
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+.catalogue-plus {
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+.catalogue-plus::before,
+.catalogue-plus::after {
+  content: '';
+  position: absolute;
+  inset: 5.5px 0;
+  height: 1px;
+  background: var(--ink);
+  transition: transform var(--dur-fast) var(--ease);
+}
+.catalogue-plus::after {
+  transform: rotate(90deg);
+}
+.is-open .catalogue-plus::after {
+  transform: rotate(0deg);
+}
+.catalogue-detail {
+  padding: 0 12px 22px calc(5.5rem + 32px);
+  max-width: 70ch;
+  color: var(--ink-dim);
+}
+.catalogue-links {
+  margin-top: 12px;
+  display: flex;
+  gap: 24px;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+/* ---- 04 Flight log ---- */
+.log {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.log-path {
+  position: absolute;
+  left: calc(13rem + 5px);
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background: var(--line-bright);
+}
+.log-path span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--signal);
+  transform-origin: top center;
+}
+.log-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: 13rem minmax(0, 1fr);
+  gap: 0 56px;
+  padding: 0 0 clamp(36px, 5vw, 64px);
+}
+.log-node {
+  position: absolute;
+  left: 13rem;
+  top: 7px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--void);
+  border: 1px solid var(--ink);
+}
+.is-active .log-node {
+  background: var(--signal);
+  border-color: var(--signal);
+  box-shadow: 0 0 0 6px var(--signal-dim), 0 0 22px var(--signal-glow);
+}
+.log-when {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 28px;
+  text-align: right;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+.log-kind {
+  color: var(--ink-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.64rem;
+}
+.is-active .log-kind {
+  color: var(--signal);
+}
+.log-what h3 {
+  font-size: clamp(1.5rem, 2.6vw, 2.3rem);
+  line-height: 1;
+}
+.log-org {
+  margin-top: 8px;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--signal);
+}
+.log-what ul {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: 68ch;
+}
+.log-what li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--ink-dim);
+}
+.log-what li + li {
+  margin-top: 8px;
+}
+.log-what li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 8px;
+  height: 1px;
+  background: var(--ink-faint);
+}
+
+.early-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: clamp(24px, 5vw, 72px);
+  padding-top: clamp(28px, 4vw, 48px);
+}
+.early-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 32px;
+}
+.early-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: var(--ink-dim);
+}
+.early-list b {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+}
+.early-list .mono {
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ---- 05 Instruments ---- */
+.instruments {
+  margin: 0;
+  border-top: 1px solid var(--line-bright);
+}
+.instrument {
+  display: grid;
+  grid-template-columns: 13rem minmax(0, 1fr);
+  gap: 16px 56px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.instrument dt {
+  padding-top: 6px;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+.instrument dd {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 0;
+  font-size: 0.95rem;
+  color: var(--ink-dim);
+}
+.instrument dd span:not(:last-child)::after {
+  content: '/';
+  margin: 0 0.7em;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.7em;
+  font-weight: 400;
+  vertical-align: middle;
+}
+.instrument.is-big dd {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 76%;
+  text-transform: uppercase;
+  font-size: clamp(1.1rem, 1.75vw, 1.55rem);
+  line-height: 1.2;
+  color: var(--ink);
+}
+/* a skill is a button: it searches the site for where that skill was used */
+.skill {
+  all: unset;
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease);
+}
+.skill:hover {
+  color: var(--hue, var(--signal));
+}
+.skill:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 3px;
+}
+.instrument.is-big dt {
+  color: var(--hue, var(--ink-dim));
+}
+
+.certs {
+  margin-top: clamp(40px, 6vw, 80px);
+}
+.certs-list {
+  list-style: none;
+  margin: 0;
+  border-top: 1px solid var(--line-bright);
+  padding: 0;
+  columns: 2;
+  column-gap: 48px;
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-dim);
+}
+.certs-list li {
+  break-inside: avoid;
+  padding: 9px 0 9px 18px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.certs-list li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 1.25em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--signal);
+}
+
+/* ---- 06 Signals ---- */
+.scholar {
+  margin: 0;
+  display: flex;
+  gap: clamp(20px, 3vw, 44px);
+}
+.scholar dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-stretch: 70%;
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  line-height: 0.9;
+}
+.scholar dt {
+  margin-top: 6px;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+.papers-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line-bright);
+}
+.paper {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr) 5.5rem;
+  gap: 16px;
+  align-items: center;
+  padding: 15px 8px;
+  border-bottom: 1px solid var(--line);
+  transition: background var(--dur-fast) var(--ease);
+}
+.paper:hover {
+  background: color-mix(in srgb, var(--panel) 80%, transparent);
+}
+.paper-year {
+  font-size: 0.76rem;
+  color: var(--signal);
+}
+.paper-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.paper-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+.paper-meta {
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  color: var(--ink-dim);
+}
+.paper-cites {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+.paper-cites b {
+  font-size: 1rem;
+  color: var(--ink);
+}
+.paper-bar {
+  height: 3px;
+  background: var(--line);
+}
+.paper-bar span {
+  display: block;
+  height: 100%;
+  background: var(--signal);
+}
+.paper-arrow {
+  transition: transform var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.paper:hover .paper-arrow {
+  transform: translate(3px, -3px);
+  color: var(--signal);
+}
+.papers-more {
+  margin-top: 20px;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.honours {
+  margin-top: clamp(48px, 7vw, 96px);
+}
+.honours-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line-bright);
+}
+.honours-list li {
+  display: grid;
+  grid-template-columns: 14px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  padding: 11px 8px;
+  border-bottom: 1px solid var(--line);
+}
+.honour-mark {
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--ink-dim);
+  transform: rotate(45deg);
+  align-self: center;
+}
+.honour-mark.is-win {
+  background: var(--signal);
+  border-color: var(--signal);
+  box-shadow: 0 0 14px var(--signal-glow);
+}
+.honour-year {
+  font-size: 0.72rem;
+  color: var(--ink-dim);
+}
+.honour-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+.honour-main b {
+  font-weight: 600;
+  font-size: 0.98rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+}
+.honour-org {
+  text-align: right;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+/* ---- 07 Contact ---- */
+.contact {
+  padding-bottom: clamp(64px, 8vw, 120px);
+}
+.contact-lede {
+  margin-top: 28px;
+  max-width: 46ch;
+  font-size: 1.12rem;
+  color: var(--ink-dim);
+}
+.contact-row {
+  margin-top: clamp(32px, 5vw, 64px);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+}
+.contact-mail {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 72%;
+  font-size: clamp(1.5rem, 4.6vw, 4rem);
+  line-height: 1;
+  overflow-wrap: anywhere;
+  border-bottom: 2px solid var(--signal);
+  padding-bottom: 6px;
+  transition: color var(--dur-fast) var(--ease);
+}
+.contact-mail:hover {
+  color: var(--signal);
+}
+.contact-links {
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 32px;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.contact-links a {
+  padding: 10px 0 3px;
+}
+.contact-links a span {
+  color: var(--signal);
+}
+
+.footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 28px var(--pad) 40px;
+  border-top: 1px solid var(--line);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+/* ---- Phone ---- */
+@media (max-width: 860px) {
+  .abstract-grid,
+  .early-grid {
+    grid-template-columns: 1fr;
+  }
+  .abstract-points {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .abstract-points li {
+    padding: 0 0 0 18px;
+  }
+
+  .catalogue-row {
+    grid-template-columns: minmax(0, 1fr) auto 14px;
+    gap: 6px 14px;
+    padding: 16px 4px;
+  }
+  .catalogue-no {
+    grid-column: 1 / -1;
+  }
+  .catalogue-tags {
+    display: none;
+  }
+  .catalogue-metric {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+  }
+  .catalogue-metric .mono {
+    display: none;
+  }
+  .catalogue-detail {
+    padding: 0 4px 20px;
+  }
+
+  .log-path {
+    left: 5px;
+  }
+  .log-entry {
+    grid-template-columns: 1fr;
+    padding-left: 30px;
+  }
+  .log-node {
+    left: 0;
+  }
+  .log-when {
+    flex-direction: row;
+    gap: 14px;
+    padding: 0 0 10px;
+    text-align: left;
+  }
+
+  .early-list {
+    grid-template-columns: 1fr;
+  }
+  .instrument {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .certs-list {
+    columns: 1;
+  }
+
+  .signals-grid {
+    grid-template-columns: 1fr;
+  }
+  .paper {
+    grid-template-columns: 2.6rem minmax(0, 1fr) 4.4rem;
+    gap: 12px;
+    padding: 14px 2px;
+  }
+
+}
+
+/* ---- Compact layer: tabs, toggles, the planet rail ---- */
+.more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  margin-top: 14px;
+  padding: 0;
+  background: none;
+  border: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line-bright);
+  transition: color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.more-btn:hover {
+  color: var(--signal);
+  border-color: var(--signal);
+}
+.more-btn span {
+  color: var(--signal);
+}
+
+/* flight log as a left-to-right trajectory */
+.orbit-track {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+.orbit-track::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 7px;
+  height: 1px;
+  background: linear-gradient(to right, var(--line-bright), var(--line-bright) 92%, transparent);
+}
+.waypoint {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  padding: 28px 14px 18px 0;
+  background: none;
+  border: 0;
+  text-align: left;
+  color: var(--ink-dim);
+  transition: color var(--dur-fast) var(--ease);
+}
+.waypoint:hover,
+.waypoint.is-active {
+  color: var(--ink);
+}
+.waypoint-node {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--void);
+  border: 1px solid var(--ink-dim);
+  transition: transform var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease),
+    box-shadow var(--dur-fast) var(--ease);
+}
+.waypoint.is-passed .waypoint-node {
+  border-color: var(--ink);
+}
+.waypoint.is-active .waypoint-node {
+  background: var(--signal);
+  border-color: var(--signal);
+  transform: scale(1.25);
+  box-shadow: 0 0 0 6px var(--signal-dim), 0 0 22px var(--signal-glow);
+}
+.waypoint.is-now .waypoint-node {
+  border-style: dashed;
+}
+.waypoint-date,
+.waypoint-kind {
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.waypoint.is-active .waypoint-kind {
+  color: var(--signal);
+}
+.waypoint-org {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 76%;
+  text-transform: uppercase;
+  font-size: clamp(0.95rem, 1.5vw, 1.35rem);
+  line-height: 1;
+}
+
+.way-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+  gap: clamp(20px, 4vw, 64px);
+  padding: clamp(20px, 2.6vw, 36px) clamp(16px, 2.4vw, 32px);
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--panel) 78%, transparent);
+  min-height: 15rem;
+}
+.way-date {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-dim);
+  margin-bottom: 10px;
+}
+.way-head h3 {
+  font-size: clamp(1.5rem, 2.6vw, 2.4rem);
+  line-height: 0.98;
+}
+.way-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.way-points li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--ink-dim);
+}
+.way-points li + li {
+  margin-top: 10px;
+}
+.way-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 8px;
+  height: 1px;
+  background: var(--signal);
+}
+.record .early-list {
+  margin-top: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 24px;
+}
+
+/* instrument dial */
+.dial {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--line-bright);
+}
+.dial-btn {
+  min-height: 44px;
+  padding: 0 16px;
+  background: none;
+  border: 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.dial-btn + .dial-btn {
+  border-left: 1px solid var(--line-bright);
+}
+.dial-btn i {
+  font-style: normal;
+  color: var(--signal);
+  margin-left: 4px;
+}
+.dial-btn:hover {
+  color: var(--ink);
+}
+.dial-btn.is-active {
+  background: var(--ink);
+  color: var(--void);
+}
+.dial-btn.is-active i {
+  color: var(--void);
+}
+
+/* signals: papers beside recognition */
+.signals-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(28px, 5vw, 72px);
+}
+.col-title {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-stretch: 100%;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: var(--ink-dim);
+  margin-bottom: 12px;
+}
+
+/* planet rail */
+.rail {
+  position: fixed;
+  right: 18px;
+  top: 50%;
+  z-index: 90;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.rail-stop {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  height: 26px;
+}
+.rail-dot {
+  width: 7px;
+  height: 7px;
+  margin: 0 4px;
+  border-radius: 50%;
+  border: 1px solid var(--ink-dim);
+  transition: transform var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+.rail-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: 3px 8px;
+  background: color-mix(in srgb, var(--void) 80%, transparent);
+  opacity: 0;
+  transform: translateX(6px);
+  transition: opacity var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+  pointer-events: none;
+}
+.rail:hover .rail-label,
+.rail-stop:focus-visible .rail-label {
+  opacity: 1;
+  transform: none;
+}
+.rail-stop:hover .rail-dot,
+.rail-stop.is-active .rail-dot {
+  background: var(--hue);
+  border-color: var(--hue);
+  transform: scale(1.6);
+  box-shadow: 0 0 14px var(--hue);
+}
+
+@media (max-width: 1180px) {
+  .rail {
+    display: none;
+  }
+}
+@media (max-width: 860px) {
+  .orbit-track {
+    grid-auto-columns: 132px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+  }
+  .way-panel {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .record .early-list {
+    grid-template-columns: 1fr;
+  }
+  .dial {
+    width: 100%;
+  }
+  .signals-grid {
+    grid-template-columns: 1fr;
+  }
+  .dial-btn {
+    flex: 1;
+    padding: 0 8px;
+    font-size: 0.6rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+@media (max-width: 760px) {
+  .footer a {
+    display: inline-block;
+    padding: 10px 0;
+  }
+}

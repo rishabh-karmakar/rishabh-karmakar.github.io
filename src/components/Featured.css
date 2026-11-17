@@ -1,0 +1,329 @@
+.study + .study {
+  margin-top: clamp(56px, 8vw, 120px);
+}
+
+.study-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+  gap: clamp(32px, 6vw, 104px);
+  padding-top: clamp(24px, 3vw, 40px);
+  align-items: start;
+}
+
+/* ---- Figure ---- */
+.study-figure {
+  margin: 0;
+}
+
+.fig-frame {
+  position: relative;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  padding: clamp(26px, 3vw, 40px) clamp(16px, 2.4vw, 32px) clamp(12px, 1.6vw, 20px);
+}
+
+.fig-tag {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 5px 10px;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--signal);
+  color: var(--on-signal);
+}
+
+.fig-plot svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.fig-note {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  fill: var(--ink-dim);
+}
+.fig-note.is-hot {
+  fill: var(--signal);
+}
+.fig-node {
+  fill: var(--void);
+  stroke: var(--line-bright);
+  stroke-width: 1;
+}
+.fig-node.is-hot {
+  fill: var(--signal);
+  stroke: var(--signal);
+}
+.fig-node-text {
+  font-family: var(--font-mono);
+  font-size: 7.4px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  fill: var(--ink);
+}
+.fig-node-text.is-hot {
+  fill: var(--on-signal);
+}
+.fig-link {
+  fill: none;
+  stroke: var(--line-bright);
+  stroke-width: 1;
+}
+.fig-pulse {
+  fill: var(--signal);
+  filter: drop-shadow(0 0 4px var(--signal));
+}
+.fig-cell {
+  fill: var(--signal);
+}
+.fig-track {
+  fill: var(--line);
+  opacity: 0.5;
+}
+.fig-bar {
+  fill: var(--ink-faint);
+}
+.fig-bar.is-hot {
+  fill: var(--signal);
+}
+
+.fig-readout {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-dim);
+  white-space: pre;
+  min-height: 2.4em;
+}
+
+.study-figure figcaption {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ink-dim);
+  max-width: 44ch;
+}
+.study-figure figcaption .mono {
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--signal);
+  margin-right: 8px;
+}
+
+/* ---- Text ---- */
+.study-context {
+  display: flex;
+  gap: 14px;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  margin-bottom: 18px;
+}
+.study-context span {
+  color: var(--signal);
+}
+
+.study-title {
+  font-size: clamp(1.9rem, 3.2vw, 3rem);
+  line-height: 0.94;
+}
+
+.study-rows {
+  margin: clamp(18px, 2vw, 28px) 0 0;
+}
+
+.study-row {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 16px;
+  padding: 13px 0;
+  border-top: 1px solid var(--line);
+}
+.study-row dt {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  padding-top: 4px;
+}
+.study-row dd {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.study-foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.study-metric {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+.study-metric-value {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-stretch: 100%;
+  font-size: clamp(4rem, 7.4vw, 6.6rem);
+  line-height: 0.8;
+  letter-spacing: -0.02em;
+  color: var(--signal);
+}
+.study-metric-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  max-width: 12ch;
+  line-height: 1.5;
+}
+
+.study-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-dim);
+}
+.study-tags li + li::before {
+  content: '/';
+  margin-right: 18px;
+  color: var(--ink-faint);
+}
+
+@media (max-width: 900px) {
+  .study-grid {
+    grid-template-columns: 1fr;
+  }
+  .study-figure {
+    position: static;
+  }
+  .study-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .study-row dt {
+    padding-top: 0;
+  }
+}
+
+.kinetic-title {
+  white-space: nowrap;
+  font-size: clamp(2.2rem, 10vw, 10.5rem);
+}
+.featured {
+  overflow-x: clip;
+}
+
+/* ---- Mission console tabs ---- */
+.console-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line-bright);
+  border-bottom: 1px solid var(--line);
+}
+.console-tab {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  align-items: end;
+  padding: 16px 18px 16px 0;
+  background: none;
+  border: 0;
+  text-align: left;
+  color: var(--ink-dim);
+  transition: color var(--dur-fast) var(--ease);
+}
+.console-tab + .console-tab {
+  padding-left: 18px;
+  border-left: 1px solid var(--line);
+}
+.console-tab::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 2px;
+  background: var(--signal);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--dur-med) var(--ease);
+}
+.console-tab.is-active::before {
+  transform: scaleX(1);
+}
+.console-tab:hover,
+.console-tab.is-active {
+  color: var(--ink);
+}
+.console-tab-no {
+  grid-column: 1 / -1;
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.console-tab.is-active .console-tab-no {
+  color: var(--signal);
+}
+.console-tab-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 76%;
+  text-transform: uppercase;
+  font-size: clamp(1rem, 1.6vw, 1.45rem);
+  line-height: 1;
+}
+.console-tab-metric {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-stretch: 80%;
+  font-size: clamp(1rem, 1.6vw, 1.45rem);
+  line-height: 1;
+  opacity: 0.5;
+}
+.console-tab.is-active .console-tab-metric {
+  color: var(--signal);
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .console-tabs {
+    grid-template-columns: 1fr 1fr;
+  }
+  .console-tab {
+    padding: 12px 10px 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .console-tab + .console-tab {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .console-tab:nth-child(even) {
+    padding-left: 12px;
+    border-left: 1px solid var(--line);
+  }
+  .console-tab-metric {
+    display: none;
+  }
+}

@@ -1,71 +1,69 @@
 :root {
-  /* ---- Color: systems-monitoring dark palette ---- */
-  --void: #05070c;
-  --panel: #0b0f18;
-  --panel-raised: #101625;
-  --line: #1c2333;
-  --line-bright: #2a3350;
+  /* ---- Night edition: deep space black, starlight silver, one amber accent ---- */
+  --void: #05060a;
+  --panel: #0e1013;
+  --panel-raised: #16191d;
+  --line: #22262b;
+  --line-bright: #3a4047;
 
-  --ink: #e6ebf5;
-  --ink-dim: #8a93ab;
-  --ink-faint: #4a5266;
+  --ink: #dfe3ea;
+  --ink-dim: #99a0ab;
+  --ink-faint: #5d636d;
 
-  --signal: #4dd8e6;
-  --signal-dim: rgba(77, 216, 230, 0.14);
-  --signal-glow: rgba(77, 216, 230, 0.35);
+  --signal: #ffb224;
+  --signal-dim: rgba(255, 178, 36, 0.12);
+  --signal-glow: rgba(255, 178, 36, 0.35);
+  --on-signal: #05060a;
 
-  --alert: #ffb454;
-  --alert-dim: rgba(255, 180, 84, 0.14);
+  /* sky colours: one per skill galaxy, reused as section glows */
+  --hue-1: #ffb224;
+  --hue-2: #ff5e8c;
+  --hue-3: #38dcc8;
+  --hue-4: #9e76ff;
+  --hue-5: #54a2ff;
+  --glow-strength: 16%;
 
-  --good: #5eead4;
-  --good-dim: rgba(94, 234, 212, 0.14);
-
-  /* Light theme override */
-  --void-light: #f4f6fa;
-  --panel-light: #ffffff;
-  --panel-raised-light: #edf1f7;
-  --line-light: #d8dfea;
-  --line-bright-light: #b9c4d6;
-  --ink-light: #0c1220;
-  --ink-dim-light: #4a5266;
-  --ink-faint-light: #8a93ab;
-  --signal-light: #0891a3;
-  --signal-dim-light: rgba(8, 145, 163, 0.08);
-  --alert-light: #b45309;
-  --alert-dim-light: rgba(180, 83, 9, 0.1);
-  --good-light: #0f9488;
-  --good-dim-light: rgba(15, 148, 136, 0.1);
+  /* legacy aliases, kept so older components keep rendering */
+  --alert: var(--signal);
+  --alert-dim: var(--signal-dim);
+  --good: var(--ink-dim);
+  --good-dim: rgba(162, 164, 157, 0.14);
 
   /* ---- Type ---- */
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-body: 'IBM Plex Sans', sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
+  --font-display: 'Anybody Variable', 'Anybody', 'Arial Narrow', Impact, sans-serif;
+  --font-body: 'Schibsted Grotesk Variable', 'Schibsted Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace;
 
   /* ---- Layout ---- */
-  --gutter-width: 56px;
-  --gutter-width-mobile: 28px;
-  --content-max: 1180px;
+  --content-max: 1320px;
+  --pad: clamp(20px, 4.2vw, 64px);
+  --nav-h: 64px;
 
   /* ---- Motion ---- */
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
   --dur-fast: 0.3s;
   --dur-med: 0.6s;
   --dur-slow: 1s;
 }
 
+/* ---- Day edition: paper, ink, and the accent flips to ultramarine ---- */
 [data-theme='light'] {
-  --void: var(--void-light);
-  --panel: var(--panel-light);
-  --panel-raised: var(--panel-raised-light);
-  --line: var(--line-light);
-  --line-bright: var(--line-bright-light);
-  --ink: var(--ink-light);
-  --ink-dim: var(--ink-dim-light);
-  --ink-faint: var(--ink-faint-light);
-  --signal: var(--signal-light);
-  --signal-dim: var(--signal-dim-light);
-  --alert: var(--alert-light);
-  --alert-dim: var(--alert-dim-light);
-  --good: var(--good-light);
-  --good-dim: var(--good-dim-light);
+  --void: #efede6;
+  --panel: #e6e3da;
+  --panel-raised: #dcd9ce;
+  --line: #cfccc0;
+  --line-bright: #b1aea2;
+
+  --ink: #0b0b0c;
+  --ink-dim: #55564f;
+  --ink-faint: #8a8a80;
+
+  --signal: #2a2aff;
+  --signal-dim: rgba(42, 42, 255, 0.1);
+  --signal-glow: rgba(42, 42, 255, 0.25);
+  --on-signal: #f6f5ef;
+  --glow-strength: 20%;
+
+  --good-dim: rgba(85, 86, 79, 0.12);
 }
